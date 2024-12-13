@@ -2,8 +2,7 @@
 
 > Completely local RAG with chat UI
 
-(https://github.com/vishesh711/RefinedRAG_BDS/blob/main/images/Demo.jpeg?raw=true)">
-  ![Description of Image](./images/Demo.jpeg)
+![Description of Image](./images/Demo.jpeg)
 
 
 ## Demo
@@ -51,9 +50,7 @@ python -m streamlit run app.py
 
 ## Architecture
 
-<a href="https://www.mlexpert.io/bootcamp" target="_blank">
-  <img src="[https://raw.githubusercontent.com/curiousily/ragbase/master/.github/architecture.png](https://github.com/vishesh711/RefinedRAG_BDS/blob/main/images/architecture.png?raw=true)">
-</a>
+![Description of Image](./images/architechture.png)
 
 ### Ingestor
 
