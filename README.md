@@ -1,76 +1,78 @@
-# Refined Rag - Private Chat with Your Documents
+# Refined Rag - Private Document Chat
 
-> Completely local RAG with chat UI
+**Completely Local Retrieval-Augmented Generation (RAG) with a Modern Chat UI**
 
-![Description of Image](./images/Demo.jpeg)
+![Refined Rag Demo](./images/Demo.jpeg)
 
+Refined Rag allows you to privately query and interact with your own documents in natural language. Run everything locally, ensure data privacy, and gain valuable insights from your files—no cloud dependency required.
 
-## Demo
+## Features at a Glance
+- **Local LLM Integration**: Use local large language models (LLMs) like `gemma2:9b` via [Ollama](https://ollama.com/) or connect to [Groq API](https://groq.com/) for flexible inference.
+- **Private Document Conversation**: Ask questions about your documents, get summarized answers, and never send your private data to third-party services.
+- **Fast & Secure Vector Retrieval**: Efficiently index and search documents with Qdrant and rerank with FlashRank for accurate, context-rich responses.
+- **Seamless UI**: Interact through a user-friendly [Streamlit](https://streamlit.io/) interface—just point and chat.
 
-## Installation
+## Quick Start
 
-Clone the repo:
+1. **Clone the Repository**
+   ```bash
+   git clone git@github.com:vishes711/RefinedRAG_BDS.git
+   cd RefinedRAG_BDS
+   ```
 
-```sh
-git clone git@github.com:vishes711/RefinedRAG_BDS.git
-cd RefinedRAG_BDS
-```
+2. **Install Dependencies**
+   Using [Poetry](https://python-poetry.org/):
+   ```bash
+   python -m poetry install
+   ```
 
-Install the dependencies (requires Poetry):
+3. **(Optional) Download a Local LLM**
+   Pull the default local LLM:
+   ```bash
+   ollama pull gemma2:9b
+   ollama serve
+   ```
 
-```sh
-python -m poetry install
-```
+4. **(Optional) Set Up Groq API**
+   To switch from the local LLM to Groq API, add a `.env` file:
+   ```env
+   GROQ_API_KEY=YOUR_API_KEY
+   ```
 
-Fetch your LLM (gemma2:9b by default) (Optional):
+5. **Run the App**
+   ```bash
+   python -m streamlit run app.py
+   ```
 
-```sh
-ollama pull gemma2:9b
-```
+## Technical Overview
 
-Run the Ollama server (Optional)
+### Architecture
+![Architecture Diagram](./images/architecture.png)
 
-```sh
-ollama serve
-```
+**Ingestor**:  
+- Extracts text from PDFs using PDFium.  
+- Splits documents into chunks using semantic and character-based methods.  
+- Stores embeddings in Qdrant, a vector database.
 
-## Add Groq API Key (Optional)
+**Retriever**:  
+- Given a query, locates and re-ranks relevant chunks.  
+- Applies LLM-based filtering for better accuracy.
 
-You can also use the Groq API to replace the local LLM, for that you'll need a `.env` file with Groq API key:
+**QA Chain**:  
+- Orchestrates between the retriever and the LLM.  
+- Provides context-driven, summarized answers to user queries.
 
-```sh
-GROQ_API_KEY=YOUR API KEY
-```
+## Technology Stack
 
-Start Refined Rag:
+- **Ollama**: Local LLM inference.
+- **Groq API**: High-performance inference service for multiple LLMs.
+- **LangChain**: Chain together various LLM operations easily.
+- **Qdrant**: Lightning-fast vector database for semantic search.
+- **FlashRank**: Efficient re-ranking of search results.
+- **FastEmbed**: Lightweight embedding generator.
+- **Streamlit**: A modern UI layer for a rich, interactive user experience.
+- **PDFium**: High-quality PDF processing and text extraction.
 
-```sh
-python -m streamlit run app.py
-```
+---
 
-## Architecture
-
-![Description of Image](./images/architecture.png)
-
-### Ingestor
-
-Extracts text from PDF documents and creates chunks (using semantic and character splitter) that are stored in a vector databse
-
-### Retriever
-
-Given a query, searches for similar documents, reranks the result and applies LLM chain filter before returning the response.
-
-### QA Chain
-
-Combines the LLM with the retriever to answer a given user question
-
-## Tech Stack
-
-- [Ollama](https://ollama.com/) - run local LLM
-- [Groq API](https://groq.com/) - fast inference for mutliple LLMs
-- [LangChain](https://www.langchain.com/) - build LLM-powered apps
-- [Qdrant](https://qdrant.tech/) - vector search/database
-- [FlashRank](https://github.com/PrithivirajDamodaran/FlashRank) - fast reranking
-- [FastEmbed](https://qdrant.github.io/fastembed/) - lightweight and fast embedding generation
-- [Streamlit](https://streamlit.io/) - build UI for data apps
-- [PDFium](https://pdfium.googlesource.com/pdfium/) - PDF processing and text extraction
+Refined Rag is more than a tool—it's your private knowledge assistant that helps you unlock insights from your documents safely and efficiently. Get started now and experience a new way of interacting with your data!
