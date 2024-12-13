@@ -1,7 +1,4 @@
-# Refined Rag - Private Document Chat
-
-**Completely Local Retrieval-Augmented Generation (RAG) with a Modern Chat UI**
-
+## Refined Rag - Private Document Chat
 ![Refined Rag Demo](./images/Demo.jpeg)
 
 Refined Rag allows you to privately query and interact with your own documents in natural language. Run everything locally, ensure data privacy, and gain valuable insights from your files—no cloud dependency required.
@@ -46,21 +43,24 @@ Refined Rag allows you to privately query and interact with your own documents i
 
 ## Technical Overview
 
-### Architecture
-![Architecture Diagram](./images/architecture.png)
-
 **Ingestor**:  
 - Extracts text from PDFs using PDFium.  
 - Splits documents into chunks using semantic and character-based methods.  
 - Stores embeddings in Qdrant, a vector database.
 
+  
+
 **Retriever**:  
 - Given a query, locates and re-ranks relevant chunks.  
 - Applies LLM-based filtering for better accuracy.
 
+  
+
 **QA Chain**:  
 - Orchestrates between the retriever and the LLM.  
 - Provides context-driven, summarized answers to user queries.
+
+  
 
 ## Technology Stack
 
