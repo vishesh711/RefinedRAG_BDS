@@ -3,7 +3,7 @@
 > Completely local RAG with chat UI
 
 <a href="https://www.mlexpert.io/bootcamp" target="_blank">
-  <img src="[https://raw.githubusercontent.com/curiousily/ragbase/master/.github/ui.png](https://github.com/vishesh711/RefinedRAG_BDS/blob/main/images/Demo.jpeg?raw=true)">
+  <img src="[[https://raw.githubusercontent.com/curiousily/ragbase/master/.github/ui.png](https://github.com/vishesh711/RefinedRAG_BDS/blob/main/images/Demo.jpeg?raw=true)](https://github.com/vishesh711/RefinedRAG_BDS/blob/main/images/Demo.jpeg?raw=true)">
 </a>
 
 ## Demo
