@@ -48,19 +48,19 @@ Refined Rag allows you to privately query and interact with your own documents i
 - Splits documents into chunks using semantic and character-based methods.  
 - Stores embeddings in Qdrant, a vector database.
 
-  
+![Refined Rag Demo](./images/In.jpeg)
 
 **Retriever**:  
 - Given a query, locates and re-ranks relevant chunks.  
 - Applies LLM-based filtering for better accuracy.
 
-  
+![Refined Rag Demo](./images/r.jpeg)
 
 **QA Chain**:  
 - Orchestrates between the retriever and the LLM.  
 - Provides context-driven, summarized answers to user queries.
 
-  
+![Refined Rag Demo](./images/qa.jpeg)
 
 ## Technology Stack
 
