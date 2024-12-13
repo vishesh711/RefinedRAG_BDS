@@ -4,7 +4,7 @@
 
 <a href="https://www.mlexpert.io/bootcamp" target="_blank">
   <img src="[[https://raw.githubusercontent.com/curiousily/ragbase/master/.github/ui.png](https://github.com/vishesh711/RefinedRAG_BDS/blob/main/images/Demo.jpeg?raw=true)](https://github.com/vishesh711/RefinedRAG_BDS/blob/main/images/Demo.jpeg?raw=true)">
-  ![image](https://github.com/user-attachments/assets/b8dfcfaf-e79e-4c6b-a0ce-95d4d22e74bc)
+  <img src="![image](https://github.com/user-attachments/assets/b8dfcfaf-e79e-4c6b-a0ce-95d4d22e74bc)">
 
 </a>
 
