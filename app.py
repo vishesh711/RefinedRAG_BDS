@@ -7,12 +7,12 @@ import speech_recognition as sr
 import streamlit as st
 from dotenv import load_dotenv
 
-from ragbase.chain import ask_question, create_chain
-from ragbase.config import Config
-from ragbase.ingestor import Ingestor
-from ragbase.model import create_llm
-from ragbase.retriever import create_retriever
-from ragbase.uploader import upload_files
+from refinedrag.chain import ask_question, create_chain
+from refinedrag.config import Config
+from refinedrag.ingestor import Ingestor
+from refinedrag.model import create_llm
+from refinedrag.retriever import create_retriever
+from refinedrag.uploader import upload_files
 
 load_dotenv()
 

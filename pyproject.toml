@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ragbase"
+name = "refinedrag"
 version = "0.1.0"
 description = ""
 authors = ["Venelin Valkov <venelin@curiousily.com>"]

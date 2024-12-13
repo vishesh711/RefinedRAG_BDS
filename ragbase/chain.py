@@ -11,8 +11,8 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_core.tracers.stdout import ConsoleCallbackHandler
 from langchain_core.vectorstores import VectorStoreRetriever
 
-from ragbase.config import Config
-from ragbase.session_history import get_session_history
+from refinedrag.config import Config
+from refinedrag.session_history import get_session_history
 
 SYSTEM_PROMPT = """
 Utilize the provided contextual information to respond to the user question.
