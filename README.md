@@ -50,7 +50,7 @@ python -m streamlit run app.py
 
 ## Architecture
 
-![Description of Image](./images/architechture.png)
+![Description of Image](./images/architecture.png)
 
 ### Ingestor
 
