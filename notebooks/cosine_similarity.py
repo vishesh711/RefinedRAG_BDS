@@ -1,5 +1,6 @@
-import os
 import json
+import os
+
 from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
 from sklearn.metrics.pairwise import cosine_similarity
 

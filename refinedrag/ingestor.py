@@ -53,4 +53,3 @@ class Ingestor:
             path=Config.Path.DATABASE_DIR,
             collection_name=Config.Database.DOCUMENTS_COLLECTION,
         )
-

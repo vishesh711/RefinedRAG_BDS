@@ -1,9 +1,9 @@
 import asyncio
+import os
 import random
 import tempfile
-import os
-import speech_recognition as sr
 
+import speech_recognition as sr
 import streamlit as st
 from dotenv import load_dotenv
 
@@ -105,7 +105,9 @@ def handle_video_and_pdf_upload():
                     # Process transcription
                     with st.spinner("Processing transcription text..."):
                         ingestor = Ingestor()
-                        vector_store = ingestor.ingest_text(transcription, source="transcription")
+                        vector_store = ingestor.ingest_text(
+                            transcription, source="transcription"
+                        )
                         llm = create_llm()
                         retriever = create_retriever(llm, vector_store=vector_store)
                         st.session_state.chain = create_chain(llm, retriever)
@@ -114,7 +116,6 @@ def handle_video_and_pdf_upload():
                     st.error("Failed to transcribe video.")
             except Exception as e:
                 st.error(f"Error during video processing: {e}")
-
 
 
 def transcribe_video_to_text(video_path):
@@ -152,7 +153,9 @@ def show_message_history():
 
 def show_chat_input():
     if "chain" not in st.session_state or st.session_state.chain is None:
-        st.warning("Please upload and process a document or video before asking questions.")
+        st.warning(
+            "Please upload and process a document or video before asking questions."
+        )
         return
 
     if prompt := st.chat_input("Ask your question here"):
